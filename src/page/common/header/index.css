@@ -1,0 +1,40 @@
+/*
+* @Author: gg
+* @Date:   2018-04-16 10:11:18
+* @Last Modified by:   gg
+* @Last Modified time: 2018-04-17 13:35:29
+*/
+/*通用页面头部的logo样式*/
+.header .logo{
+    position: absolute;
+    left: 20px;
+    top: 32px;
+    display: block;
+    font-size: 35px;
+    font-weight: bold;
+    color: #c60023;
+
+}
+/*通用页面头部的整个搜索栏样式*/
+.header .search-con{
+    padding:40px 0 30px 250px;
+}
+/*搜索栏中搜索输入框的样式*/
+.header .search-con .search-input{
+    width: 550px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    border: solid 2px #c60023; 
+    outline: none;   /*去掉文本框输入时自动加上的外边框*/
+}
+/*搜索栏中搜索按钮的样式*/
+.header .search-con .search-btn{
+    /*去掉搜索框和搜索按钮之间的空隙，因为absolute定位方式
+    会以上一个元素的末尾作为当前元素的起始位置*/
+    position: absolute;
+    /*高度必须和搜索框一致*/
+    height: 44px;
+    width: 80px;
+}

@@ -1,0 +1,29 @@
+/*
+* @Author: gg
+* @Date:   2018-04-16 16:29:40
+* @Last Modified by:   gg
+* @Last Modified time: 2018-04-17 11:20:57
+*/
+/*左侧导航栏整体的样式*/
+.nav-side{
+    float: left;
+    width: 130px;
+    min-height: 100px;
+}
+/*左侧导航栏列表项的样式*/
+.nav-side .nav-item{
+    line-height: 25px;
+    font-size: 13px;
+}
+.nav-side .nav-item .link{
+    color: #888;
+}
+/*左侧导航栏中当前选中项的样式*/
+.nav-side .nav-item.active .link{
+    color: #c60023;
+}
+/*右侧内容区域的样式*/
+.content.with-nav{
+    float: left;
+    width: 950px;
+}

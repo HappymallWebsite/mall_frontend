@@ -1,0 +1,33 @@
+/*
+* @Author: gg
+* @Date:   2018-04-14 21:40:39
+* @Last Modified by:   gg
+* @Last Modified time: 2018-04-15 10:36:11
+*/
+/*整个头部导航栏样式*/
+.nav{
+    background: #eee;
+    height: 30px;
+    line-height: 30px;
+}
+/*用户部分*/
+.nav .user{
+    float: left;
+}
+/*让每个字段右间隔5px*/
+.nav .user .link{
+    margin-right: 5px;
+}
+/*在登录之前先把“欢迎、退出”字段隐藏掉*/
+.nav .user.login{
+    display: none;
+}
+/*导航链接部分*/
+.nav .nav-list{
+    float: right;
+}
+/*让导航链接字段以inline的方式显示在一行，同时左间隔5px*/
+.nav .nav-list .nav-item{
+    display: inline-block;
+    margin-left: 5px;
+}

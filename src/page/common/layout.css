@@ -1,0 +1,107 @@
+/*
+* @Author: gg
+* @Date:   2018-04-14 10:11:57
+* @Last Modified by:   gg
+* @Last Modified time: 2018-04-16 13:46:40
+*/
+
+/*css默认样式重置:把DOM元素里默认的样式都去掉，以便我们自己重新设置*/
+*{
+    /*把所有元素的外边距和内边距都去掉*/
+    margin : 0;
+    padding : 0;
+}
+body{
+    background: #f6f6f6;
+    /*设置:字体大小/行间距 多个字体类型*/
+    font : 12px/1.5 tahoma,arial,Microsoft YaHei,sans-serif;
+}
+li{
+    /*去掉列表前默认添加的圆点*/
+    list-style: none;
+}
+img{
+    display: block;
+    border: none;
+}
+label{
+    /*让鼠标指标变成“小手”形状*/
+    cursor: pointer;
+}
+input[type='checkbox']{
+    cursor:pointer;
+}
+
+/*定宽布局(适用于常规浏览器页面)*/
+.w{
+    /*将宽度定死*/
+    width:1080px;
+    /*让整个页面居中*/
+    margin: 0 auto;
+    /*主页面相对定位*/
+    position: relative;
+    /*隐藏溢出的内容，同时具有清除浮动的功能*/
+    overflow: hidden;
+}
+/*如果是大屏幕的浏览器，需要增加屏幕宽度*/
+.large .w{
+    width:1600px;
+}
+/*全局通用样式*/
+/*隐藏元素*/
+.hide{
+    display: none;
+}
+/*超链接未被单击时的样式*/
+.link{
+    color: #999;
+    cursor: pointer;
+    text-decoration: none;
+}
+/*鼠标放到超链接上时的样式*/
+.link:hover{
+    color: #e80012;
+}
+/*不能被单击的类似链接样式*/
+.link-text{
+    color: #999;
+    text-decoration: none;
+}
+/*btn类样式*/
+.btn{
+    /*让元素变成block类型，可以设置宽高*/
+    display: inline-block; 
+    padding: 0 20px;
+    height: 40px;  /*整个元素高度*/
+    line-height: 40px;    /*文本所占的行高*/
+    vertical-align: middle; /*让文本垂直居中*/
+    border: none;
+    background: #c60023;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    /*outline默认值会在btn按钮被单击时会再加上一个外边框，需要去掉*/
+    outline: none;    
+    cursor:pointer;
+    text-decoration: none;
+}
+/*btn-mini类样式*/
+.btn-mini{
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+/*loading类样式*/
+.loading{
+    margin: 10px auto; /*设置样式外边距为10px，自动居中*/
+    display: block;
+    width: 65px;
+    height: 65px;
+    border: 1px solid #ddd;
+    border-radius: 5px;/*设置圆角边框半径*/
+    /*引入css样式中自带的icon-font*/
+    background: url(../../image/icon/loading.gif) no-repeat;
+    opacity: 0.6;  /*设置样式的不透明度为0.6，opacity值越大，显示越清晰*/
+}

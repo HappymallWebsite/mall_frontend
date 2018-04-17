@@ -1,0 +1,26 @@
+/*
+* @Author: gg
+* @Date:   2018-04-15 12:04:37
+* @Last Modified by:   gg
+* @Last Modified time: 2018-04-15 12:32:49
+*/
+.footer{
+    /*让整个footer与页面最底部之间留有一定间隔*/
+    padding-bottom: 10px;
+}
+.footer .links{
+    text-align: center;
+    color: #666;
+    /*文本字体大小在layout.css中设置的是12px
+    这里设置文本行高为30px*/
+    line-height: 30px;
+}
+.footer .links .link {
+    /*设置各个友情链接之间的左右间隔为10px*/
+    padding: 0 10px;
+}
+.footer .copyright{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}

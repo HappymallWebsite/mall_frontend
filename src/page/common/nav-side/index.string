@@ -1,0 +1,18 @@
+<!-- 获取navList变量值 -->
+{{#navList}}
+
+<!-- 获取isActive变量值，当为true时，给列表项额外加上active样式；
+    当为非true时，不加active样式 -->
+{{#isActive}}
+<li class="nav-item active">
+{{/isActive}}
+
+{{^isActive}}
+<li class="nav-item">
+{{/isActive}}  
+
+<!-- 获取href和desc变量值 -->
+    <a class="link" href="{{href}}">{{desc}}</a>
+</li>
+<!-- navList的结束标志 -->
+{{/navList}}
