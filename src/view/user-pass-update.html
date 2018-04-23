@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- commonJS语法引入公共头部meta标签 -->
+    <%= require('html-loader!./layout/head-common.html') %>
+    <!-- 页面标题借助htmlWebpackPlugin插件灵活获取 -->
+    <title><%= htmlWebpackPlugin.options.title %> - happymall电商平台</title>
+</head>
+<body>
+    <!-- 引入头部导航栏 -->
+    <%= require('html-loader!./layout/nav.html') %>
+    <!-- 引入头部搜索栏 -->
+    <%= require('html-loader!./layout/header.html') %>
+    <!-- 在头部搜索栏的下面定义一个面包屑导航，比如“Mall>个人中心”样式-->
+    <div class="crumb">
+        <div class="w">
+            <div class="crumb-con">
+                <a class="link" href="index.html">HappyMall</a>
+                <span> > </span>
+                <!-- 表示当前层级 -->                           
+                <span class="link-text"><%= htmlWebpackPlugin.options.title %></span> 
+            </div>
+        </div>
+    </div>
+    <!-- 在一个容器左侧引入侧边导航栏，右侧引入panel内容区域 -->
+    <div class="page-wrap w">
+        <%= require('html-loader!./layout/nav-side.html') %>
+        <div class="content with-nav">
+            <div class="panel">
+                <div class="panel-title">修改密码</div>
+                <div class="panel-body">
+                    <div class="userInfo">
+                        <!-- 分行显示原密码、新密码、密码确认-->
+                        <div class="form-line">
+                            <span class="label">原密码：</span>
+                            <input  type="password" class="input" id="password" autocomplete="off"></input>
+                        </div>
+                        <div class="form-line">
+                            <span class="label">新密码：</span>
+                            <input type="password" class="input" id="password-new" autocomplete="off"></input>
+                        </div>
+                        <div class="form-line">
+                            <span class="label">确认密码：</span>
+                            <input type="password" class="input" id="password-confirm" autocomplete="off"></input>
+                        </div>
+                        <span class="btn btn-submit">提 交</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 引入底部导航栏 -->
+    <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

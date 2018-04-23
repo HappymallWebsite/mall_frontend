@@ -2,7 +2,7 @@
 * @Author: gg
 * @Date:   2018-04-16 10:11:09
 * @Last Modified by:   gg
-* @Last Modified time: 2018-04-17 11:20:26
+* @Last Modified time: 2018-04-23 14:42:59
 */
 'use strict';
 require('./index.css');
@@ -16,11 +16,11 @@ var navSide = {
         navList : [
             {name: 'user-center', desc: '个人中心',  href: './user-center.html'},
             {name: 'order-list', desc: '我的订单',  href: './order-list.html'},
-            {name: 'pass-update', desc: '修改密码',  href: './pass-update.html'},
+            {name: 'user-pass-update', desc: '修改密码',  href: './user-pass-update.html'},
             {name: 'about', desc: '关于Mall',  href: './about.html'}
         ],
     },
-    // 初始化option对象
+    // 初始化option对象，传入选中列表项的name
     init:function(option){
         // $.extend方法用于扩展已有的object对象，也就是将多个对象合并，经常用于设置一系列默认参数
         // 具体语法是：$.extend(target,obj1,...objN),意思是用obj1,...objN来扩展target目标对象

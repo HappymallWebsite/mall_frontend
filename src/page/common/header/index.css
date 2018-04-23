@@ -2,7 +2,7 @@
 * @Author: gg
 * @Date:   2018-04-16 10:11:18
 * @Last Modified by:   gg
-* @Last Modified time: 2018-04-17 13:35:29
+* @Last Modified time: 2018-04-22 21:17:36
 */
 /*通用页面头部的logo样式*/
 .header .logo{
@@ -10,10 +10,10 @@
     left: 20px;
     top: 32px;
     display: block;
-    font-size: 35px;
+    font-size: 34px;
     font-weight: bold;
     color: #c60023;
-
+    text-decoration: none;
 }
 /*通用页面头部的整个搜索栏样式*/
 .header .search-con{
@@ -37,4 +37,14 @@
     /*高度必须和搜索框一致*/
     height: 44px;
     width: 80px;
+}
+/*面包屑导航栏的样式*/
+.crumb{
+    height: 40px;
+    line-height: 40px;
+    background: #eee;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border-top: solid 2px #c60023;
 }

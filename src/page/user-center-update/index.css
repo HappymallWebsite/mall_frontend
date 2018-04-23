@@ -1,0 +1,24 @@
+/*
+* @Author: gg
+* @Date:   2018-04-22 20:37:13
+* @Last Modified by:   gg
+* @Last Modified time: 2018-04-23 10:30:35
+*/
+.form-line{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.form-line .label{
+    width: 60px;
+    /*width和height只对块级元素生效*/
+    display: inline-block;
+    text-align: center;
+}
+.form-line .input{
+    height: 25px;
+    line-height: 25px;
+    width: 200px;
+    font-size: 14px;
+}

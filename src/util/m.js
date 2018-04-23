@@ -2,7 +2,7 @@
 * @Author: gg
 * @Date:   2018-04-13 08:57:30
 * @Last Modified by:   gg
-* @Last Modified time: 2018-04-13 21:43:49
+* @Last Modified time: 2018-04-22 16:48:44
 */
 'use strict';
 //加载hogan组件
@@ -12,7 +12,7 @@ var conf = {
     serverHost : '',
 };
 var _m={
-    //处理网络请求的对象request
+    //处理网络请求的对象request（向服务器发送请求）
     //参数param也是一个对象，包含method、url、type、data、success、error属性
     request : function(param){
         //使_this指向_m对象
@@ -27,19 +27,19 @@ var _m={
             dataType : param.type || 'json',
             // 发送到服务器的数据（post方式的参数）
             data :param.data || '',
-            // 请求成功后调用的回调函数
+            // 请求成功后调用的回调函数，res是一个对象类型
             success : function(res){
                 //请求完全成功
                 if(res.status === 0){
                     typeof param.success === 'function' && param.success(res.data,res.msg);
                 }
-                //请求成功，但没有登录状态，需要强制登录
-                else if(res.status === 10){
-                    _this.doLogin(); // _this指向_m对象
-                }
-                //请求成功，但请求数据错误
+                //请求状态成功，但请求发送的数据错误
                 else if(res.status === 1){
                     typeof param.error === 'function' && param.error(res.msg);
+                }
+                //请求状态成功，但没有登录，需要强制登录
+                else if(res.status === 10){
+                    _this.doLogin(); // _this指向_m对象
                 }
             },
             //请求失败后调用的回调函数
@@ -104,8 +104,8 @@ var _m={
     },
     //统一跳转到登录页面
     doLogin : function(){
-        //将当前窗口定位到login.html页面，登录以后还要重定向到原来的地址，不能都跳回主页
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        //将当前窗口定位到user-login.html页面，登录以后还要重定向到原来的地址，不能都跳回主页
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     //统一跳转到主页面
     goHome : function(){

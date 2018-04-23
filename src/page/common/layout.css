@@ -2,7 +2,7 @@
 * @Author: gg
 * @Date:   2018-04-14 10:11:57
 * @Last Modified by:   gg
-* @Last Modified time: 2018-04-16 13:46:40
+* @Last Modified time: 2018-04-22 21:44:17
 */
 
 /*css默认样式重置:把DOM元素里默认的样式都去掉，以便我们自己重新设置*/
@@ -47,6 +47,25 @@ input[type='checkbox']{
 .large .w{
     width:1600px;
 }
+/*通用panel容器的样式(存放一个标题和一些内容)*/
+.panel{
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff; 
+}
+/*通用panel容器的标题样式*/
+.panel .panel-title{
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: solid 1px #eee;
+}
+/*通用panel容器的内容区域样式*/
+.panel .panel-body{
+    padding: 10px;
+    overflow: hidden;
+}
 /*全局通用样式*/
 /*隐藏元素*/
 .hide{
@@ -80,7 +99,7 @@ input[type='checkbox']{
     font-size: 17px;
     font-weight: bold;
     color: #fff;
-    /*outline默认值会在btn按钮被单击时会再加上一个外边框，需要去掉*/
+    /*outline默认值会在btn按钮被单击时再加上一个外边框，需要去掉*/
     outline: none;    
     cursor:pointer;
     text-decoration: none;
